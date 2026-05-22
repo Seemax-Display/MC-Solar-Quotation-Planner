@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FV Shop - Promo e Negozio Fotovoltaico</title>
+  <title>MC SOLAR - Quotation Planner</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="topbar">
     <div class="brand">
-      <div class="logo">FV</div>
+      <div class="logo"><img src="assets/logos/mc_logo.jpeg" alt="MC Solar Logo" /></div>
       <div>
-        <h1>FV Shop - Promo e Negozio Fotovoltaico</h1>
-        <span>Catalogo digitale, promo preimpostate, carrello e commessa d'ordine</span>
+        <h1>MC SOLAR - Quotation Planner</h1>
+        <span>Il Calcolatore di Fotovoltaico definitivo</span>
       </div>
     </div>
     <div class="top-actions">
@@ -31,7 +31,7 @@
       <button class="step-item" data-step="promo"><span class="step-number">⚡</span>Promo</button>
       <button class="step-item" data-step="shop"><span class="step-number">🛍️</span>Negozio</button>
       <button class="step-item" data-step="cart"><span class="step-number">🛒</span>Carrello</button>
-      <p class="disclaimer"><strong>MC Solar Quotation Planner</strong> developed by: David Failla - vers.<code>1.0.0.1</code>.</p>
+      <p class="disclaimer"><strong>MC Solar Quotation Planner</strong> developed by: David Failla - vers.<code>1.0.0.3</code>.</p>
     </aside>
 
     <section class="panel">
@@ -42,7 +42,7 @@
           <p>Compila i dati cliente, inserisci i dettagli sul tetto e seleziona i prodotti da acquistare.</p>
         </div>
         <div class="hero-cart" data-step="cart">
-          <span class="hero-cart-icon">🛒</span>
+          <span class="hero-cart-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L23 6H6"></path></svg></span>
           <div><strong id="heroCartCount">0 articoli</strong><span id="heroCartTotal">0,00 €</span></div>
         </div>
       </section>
@@ -107,6 +107,7 @@
           <div><label>Cerca Prodotto</label><input id="shopSearch" placeholder="Cerca modello, descrizione, Solis, Dyness..." /></div>
           <div><label>Categoria</label><select id="shopCategory"></select></div>
           <div><label>Sistema</label><select id="shopSystem"></select></div>
+          <div><label>Fase</label><select id="shopPhase"><option value="all">Tutti</option><option value="monofase">Solo Monofase</option><option value="trifase">Solo Trifase</option></select></div>
         </div>
         <div class="product-count" id="productCount"></div>
         <div class="product-grid" id="productGrid"></div>
@@ -121,10 +122,25 @@
 
     <aside class="summary">
       <div class="summary-card"><h3>Riepilogo Live</h3><div class="metric-grid"><div class="metric"><span>Promo</span><strong id="livePromo">-</strong></div><div class="metric"><span>Carrello</span><strong id="liveCartItems">0 articoli</strong></div><div class="metric"><span>Sconto Promo</span><strong id="liveDiscount">-</strong></div><div class="metric"><span>Totale carrello</span><strong id="liveCartTotal">0,00 €</strong></div></div></div>
-      <div class="summary-card"><h3>Configurazione</h3><ul class="summary-list"><li><span>Tipo tetto</span><strong id="sumRoof">-</strong></li><li><span>Backup Promo</span><strong id="sumBackup">-</strong></li><li><span>Provvigione Promo</span><strong id="sumCommission">-</strong></li><li><span>Importo provvigione</span><strong id="sumCommissionAmount">-</strong></li></ul></div>
+      <div class="summary-card"><h3>Configurazione</h3><ul class="summary-list"><li><span>Tipo tetto</span><strong id="sumRoof">-</strong></li><li><span>Backup Promo</span><strong id="sumBackup">-</strong></li><li><span>Provvigione ordine</span><strong id="sumCommission">-</strong></li><li><span>Importo provvigione</span><strong id="sumCommissionAmount">-</strong></li></ul></div>
       <div class="summary-card"><h3>Azioni Rapide</h3><div class="action-stack"><button class="btn-primary" data-step="cart">Apri Carrello</button><button class="btn-ghost" id="printOrderBtn">Stampa Commessa</button></div><p class="disclaimer">La stampa include un riepilogo completo da condividere con lo staff di MC SOLAR.</p></div>
     </aside>
   </main>
+
+
+  <div class="modal-overlay" id="discountModal" aria-hidden="true">
+    <div class="discount-modal" role="dialog" aria-modal="true" aria-labelledby="discountModalTitle">
+      <button class="modal-close" id="discountModalClose" aria-label="Chiudi">×</button>
+      <span class="eyebrow modal-eyebrow">SCONTO COMMERCIALE NEGOZIO</span>
+      <h2 id="discountModalTitle">Seleziona lo sconto commerciale</h2>
+      <p>Questo sconto verrà applicato automaticamente a tutti gli articoli del Negozio aggiunti al carrello. Se scegli il 50%, i prodotti SOLIS e DYNESS verranno portati automaticamente al 51%.</p>
+      <div class="discount-choice-grid">
+        <button class="discount-choice" data-discount-choice="45"><strong>45%</strong><span>Provvigione 6%</span></button>
+        <button class="discount-choice" data-discount-choice="48"><strong>48%</strong><span>Provvigione 5%</span></button>
+        <button class="discount-choice" data-discount-choice="50"><strong>50%</strong><span>Provvigione 4% · SOLIS/DYNESS 51%</span></button>
+      </div>
+    </div>
+  </div>
 
   <script src="data/products.js"></script>
   <script src="data/promos.js"></script>
