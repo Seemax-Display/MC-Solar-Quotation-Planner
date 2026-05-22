@@ -31,15 +31,15 @@
       <button class="step-item" data-step="promo"><span class="step-number">⚡</span>Promo</button>
       <button class="step-item" data-step="shop"><span class="step-number">🛍️</span>Negozio</button>
       <button class="step-item" data-step="cart"><span class="step-number">🛒</span>Carrello</button>
-      <p class="disclaimer">Valori modificabili dall'admin: cercare <strong>#AdminEditabile</strong> nei file <code>data/products.js</code> e <code>data/promos.js</code>.</p>
+      <p class="disclaimer"><strong>MC Solar Quotation Planner</strong> developed by: David Failla - vers.<code>1.0.0.1</code>.</p>
     </aside>
 
     <section class="panel">
       <section class="shop-hero">
         <div>
-          <span class="eyebrow">FV DIGITAL SHOP</span>
-          <h2>Configura, scegli e prepara la commessa in pochi click</h2>
-          <p>Usa le Promo preimpostate oppure componi l'ordine dal Negozio prodotti. Tutte le immagini sono file locali nella cartella <code>assets/product-images</code>.</p>
+          <span class="eyebrow">MC SOLAR QUOTATION PLANNER</span>
+          <h2>Il tuo Listino a portata di Click</h2>
+          <p>Compila i dati cliente, inserisci i dettagli sul tetto e seleziona i prodotti da acquistare.</p>
         </div>
         <div class="hero-cart" data-step="cart">
           <span class="hero-cart-icon">🛒</span>
@@ -48,30 +48,30 @@
       </section>
 
       <section class="step active" id="step-customer">
-        <h2 class="panel-title">Dati cliente e progetto</h2>
-        <p class="panel-subtitle">Identifica cliente, indirizzo installazione, agente e note utili per la commessa.</p>
+        <h2 class="panel-title">Dati Cliente e Progetto</h2>
+        <p class="panel-subtitle">Identifica il cliente, inserisci l indirizzo di installazione e aggiungi un agente e note utili per la commessa.</p>
         <div class="grid">
-          <div class="field"><label>Nome cliente / referente</label><input id="customerName" placeholder="Es. Mario Rossi" /></div>
-          <div class="field"><label>Ragione sociale</label><input id="companyName" placeholder="Es. Rossi S.r.l." /></div>
-          <div class="field"><label>Email</label><input id="email" type="email" placeholder="cliente@email.it" /></div>
+          <div class="field"><label>Nome Cliente / Referente</label><input id="customerName" placeholder="Es. Mario Rossi" /></div>
+          <div class="field"><label>Ragione Sociale</label><input id="companyName" placeholder="Es. Rossi S.r.l." /></div>
+          <div class="field"><label>E-Mail</label><input id="email" type="email" placeholder="cliente@email.it" /></div>
           <div class="field"><label>Telefono</label><input id="phone" placeholder="+39 ..." /></div>
-          <div class="field full"><label>Indirizzo installazione</label><input id="address" placeholder="Via, numero civico, Comune" /></div>
+          <div class="field full"><label>Indirizzo Installazione</label><input id="address" placeholder="Via, numero civico, Comune" /></div>
           <div class="field third"><label>Comune</label><input id="city" placeholder="Es. Milano" /></div>
           <div class="field third"><label>Provincia</label><input id="province" placeholder="Es. MI" /></div>
-          <div class="field third"><label>Regione / zona</label><select id="zone"><option>Nord Italia</option><option>Centro Italia</option><option>Sud Italia / Isole</option></select></div>
-          <div class="field third"><label>Tipo cliente</label><select id="customerType"><option>Privato</option><option>Azienda</option><option>Condominio</option><option>Pubblica amministrazione</option><option>Agricolo</option></select></div>
+          <div class="field third"><label>Regione / Zona</label><select id="zone"><option>Nord Italia</option><option>Centro Italia</option><option>Sud Italia / Isole</option></select></div>
+          <div class="field third"><label>Tipo Cliente</label><select id="customerType"><option>Privato</option><option>Azienda</option><option>Condominio</option><option>Pubblica amministrazione</option><option>Agricolo</option></select></div>
           <div class="field third"><label>Agente</label><input id="agentName" placeholder="Nome agente" /></div>
-          <div class="field third"><label>Data commessa</label><input id="quoteDate" type="date" /></div>
-          <div class="field full"><label>Note commerciali</label><textarea id="commercialNotes" placeholder="Esigenze del cliente, urgenza, richieste particolari..."></textarea></div>
+          <div class="field third"><label>Data Commessa</label><input id="quoteDate" type="date" /></div>
+          <div class="field full"><label>Note Commerciali</label><textarea id="commercialNotes" placeholder="Esigenze del cliente, urgenza, richieste particolari..."></textarea></div>
         </div>
       </section>
 
       <section class="step" id="step-roof">
         <h2 class="panel-title">Tetto</h2>
-        <p class="panel-subtitle">Dati utili per scegliere le Promo corrette e per la commessa d'ordine.</p>
+        <p class="panel-subtitle">Identifica la Tipologia di Tetto, inserisci la metratura chiave e segnala ostacoli o gradi inclinazione.</p>
         <div class="grid">
-          <div class="field third"><label>Tipologia tetto</label><select id="roofType"><option value="falda">Tetto a Falda</option><option value="termocopertura">Tetto Termocopertura</option><option value="piano">Tetto Piano</option></select></div>
-          <div class="field third"><label>Materiale copertura</label><select id="roofMaterial"><option>Tegole</option><option>Coppi</option><option>Lamiera grecata</option><option>Pannello sandwich</option><option>Guaina</option><option>Cemento</option><option>Altro</option></select></div>
+          <div class="field third"><label>Tipologia Tetto</label><select id="roofType"><option value="falda">Tetto a Falda</option><option value="termocopertura">Tetto Termocopertura</option><option value="piano">Tetto Piano</option></select></div>
+          <div class="field third"><label>Materiale Copertura</label><select id="roofMaterial"><option>Tegole</option><option>Coppi</option><option>Lamiera grecata</option><option>Pannello sandwich</option><option>Guaina</option><option>Cemento</option><option>Altro</option></select></div>
           <div class="field third"><label>Superficie disponibile stimata</label><input id="roofArea" type="number" min="0" value="45" /><div class="hint">m² indicativi utili per la nota tecnica.</div></div>
           <div class="field third"><label>Orientamento principale</label><select id="orientation"><option>Sud</option><option>Sud-Est</option><option>Sud-Ovest</option><option>Est/Ovest</option><option>Est</option><option>Ovest</option><option>Nord</option></select></div>
           <div class="field third"><label>Inclinazione</label><input id="tilt" type="number" min="0" max="60" value="25" /><div class="hint">Gradi indicativi.</div></div>
@@ -82,7 +82,7 @@
 
       <section class="step" id="step-promo">
         <h2 class="panel-title">Promo</h2>
-        <p class="panel-subtitle">Kit preimpostati con prezzo fisso, composizione espandibile e aggiunta al carrello.</p>
+        <p class="panel-subtitle">Kit preimpostati con prezzo fisso e composizione espandibile.</p>
         <h3 class="section-title">Tipo Promo</h3>
         <div class="choice-row">
           <label class="choice-card"><input type="radio" name="promoPhase" value="monofase" checked><span><strong>Promo Monofase</strong><small>Kit 6+10 e 6+15</small></span></label>
@@ -90,21 +90,21 @@
         </div>
         <h3 class="section-title">Opzioni Promo</h3>
         <div class="grid">
-          <div class="field third"><label>Tipo di tetto</label><select id="promoRoofType"><option value="falda">Tetto a Falda</option><option value="termocopertura">Tetto Termocopertura</option><option value="piano">Tetto Piano</option></select></div>
+          <div class="field third"><label>Tipo di Tetto</label><select id="promoRoofType"><option value="falda">Tetto a Falda</option><option value="termocopertura">Tetto Termocopertura</option><option value="piano">Tetto Piano</option></select></div>
           <div class="field third"><label>Backup</label><select id="backupMode"><option value="presente">Presente</option><option value="non-presente" selected>Non presente</option></select></div>
           <div class="field third"><label>Sconto Commerciale</label><select id="commercialDiscount"></select><div class="hint">Il 51% e disponibile solo per Promo Monofase.</div></div>
           <div class="field third"><label>Percentuale Provvigionale</label><input id="commissionPercent" readonly /></div>
           <div class="field third"><label>IVA</label><input id="vat" type="number" min="0" max="30" value="10" /></div>
-          <div class="field third"><label>Extra / adeguamenti</label><input id="extraCost" type="number" min="0" value="0" /></div>
+          <div class="field third"><label>Extra / Adeguamenti</label><input id="extraCost" type="number" min="0" value="0" /></div>
         </div>
         <div class="promo-grid" id="promoCards"></div>
       </section>
 
       <section class="step" id="step-shop">
         <h2 class="panel-title">Negozio</h2>
-        <p class="panel-subtitle">Catalogo e-shop con prodotti e immagini estratte dal PDF listino MC Solar Maggio 2026.</p>
+        <p class="panel-subtitle">Catalogo E-Shop con prodotti aggiornati dal PDF listino MC Solar Maggio 2026.</p>
         <div class="toolbar">
-          <div><label>Cerca prodotto</label><input id="shopSearch" placeholder="Cerca modello, descrizione, Solis, Dyness..." /></div>
+          <div><label>Cerca Prodotto</label><input id="shopSearch" placeholder="Cerca modello, descrizione, Solis, Dyness..." /></div>
           <div><label>Categoria</label><select id="shopCategory"></select></div>
           <div><label>Sistema</label><select id="shopSystem"></select></div>
         </div>
@@ -113,16 +113,16 @@
       </section>
 
       <section class="step" id="step-cart">
-        <h2 class="panel-title">Carrello e commessa d'ordine</h2>
-        <p class="panel-subtitle">Panoramica completa di Promo e prodotti selezionati.</p>
+        <h2 class="panel-title">Carrello e Commessa D'ordine</h2>
+        <p class="panel-subtitle">Panoramica completa di Promo e Prodotti selezionati.</p>
         <div id="cartContainer"></div>
       </section>
     </section>
 
     <aside class="summary">
-      <div class="summary-card"><h3>Riepilogo live</h3><div class="metric-grid"><div class="metric"><span>Promo</span><strong id="livePromo">-</strong></div><div class="metric"><span>Carrello</span><strong id="liveCartItems">0 articoli</strong></div><div class="metric"><span>Sconto Promo</span><strong id="liveDiscount">-</strong></div><div class="metric"><span>Totale carrello</span><strong id="liveCartTotal">0,00 €</strong></div></div></div>
+      <div class="summary-card"><h3>Riepilogo Live</h3><div class="metric-grid"><div class="metric"><span>Promo</span><strong id="livePromo">-</strong></div><div class="metric"><span>Carrello</span><strong id="liveCartItems">0 articoli</strong></div><div class="metric"><span>Sconto Promo</span><strong id="liveDiscount">-</strong></div><div class="metric"><span>Totale carrello</span><strong id="liveCartTotal">0,00 €</strong></div></div></div>
       <div class="summary-card"><h3>Configurazione</h3><ul class="summary-list"><li><span>Tipo tetto</span><strong id="sumRoof">-</strong></li><li><span>Backup Promo</span><strong id="sumBackup">-</strong></li><li><span>Provvigione Promo</span><strong id="sumCommission">-</strong></li><li><span>Importo provvigione</span><strong id="sumCommissionAmount">-</strong></li></ul></div>
-      <div class="summary-card"><h3>Azioni rapide</h3><div class="action-stack"><button class="btn-primary" data-step="cart">Apri carrello</button><button class="btn-ghost" id="printOrderBtn">Stampa commessa</button></div><p class="disclaimer">La stampa include dati cliente, tetto, righe carrello, totali e note.</p></div>
+      <div class="summary-card"><h3>Azioni Rapide</h3><div class="action-stack"><button class="btn-primary" data-step="cart">Apri Carrello</button><button class="btn-ghost" id="printOrderBtn">Stampa Commessa</button></div><p class="disclaimer">La stampa include un riepilogo completo da condividere con lo staff di MC SOLAR.</p></div>
     </aside>
   </main>
 
